@@ -2,7 +2,7 @@
 <job id="my-batch-job"
      xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
     <properties>
-        <property name="dir" value="/Users/tada/java/tmp"/>
+        <property name="dir" value="CSVを置いているディレクトリのパス"/>
         <property name="input_file" value="test1.csv"/>
     </properties>
 
