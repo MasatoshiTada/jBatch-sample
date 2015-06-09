@@ -2,10 +2,8 @@ package sample.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Properties;
 import javax.batch.operations.JobOperator;
 import javax.batch.runtime.BatchRuntime;
-import javax.batch.runtime.JobExecution;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +21,7 @@ public class BatchStartServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // ジョブの起動
         JobOperator jobOperator = BatchRuntime.getJobOperator();
-        long executionId = jobOperator.start("my-batch-job", new Properties());
+        long executionId = jobOperator.start("my-batch-job", null);
         PrintWriter out = response.getWriter();
         out.println("start!!!");
     }
